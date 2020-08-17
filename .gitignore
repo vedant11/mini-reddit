@@ -1,2 +1,8 @@
 .env*
 .vscode
+Lib/
+Scripts/
+pyvenv.cfg
+mysite/polls/__pycache__
+
+	
