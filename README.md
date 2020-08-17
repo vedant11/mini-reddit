@@ -1,5 +1,8 @@
 # mini-reddit
 An imitation of Reddit
+
+- django
+- postgres
 ____
 
 ## v0
