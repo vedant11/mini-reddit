@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        myproject polls webApp
+    </title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body id="bg" style="background-image: url('{% static "images/background.jpeg"%}')";>
+    <p>Latest posts:</p>
+    {% if latest_post_list %}
+    <ul>
+        {% for post in latest_post_list %}
+        <li><a href="{% url 'polls:detail' post.id %}">{{ post.post_text }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No posts are available.</p>
+    {% endif %}
+</body>
+
+</html>
