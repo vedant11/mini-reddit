@@ -1,8 +1,9 @@
 .env*
-.vscode
+.vscode*
 Lib/
 Scripts/
 pyvenv.cfg
 mysite/polls/__pycache__
-
+mysite/mysite/__pycache__
+mysite/polls/migrations/__pycache__
 	
