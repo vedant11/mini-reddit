@@ -5,7 +5,7 @@ from .models import Post, Choice
 
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ["pub_date", "post_text"]
+    fields = ["pub_date", "post_text", "post_message"]
 
 
 admin.site.register(Post, PostAdmin)

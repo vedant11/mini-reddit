@@ -49,5 +49,7 @@ def vote(request, post_id):
         )
     else:
         selected_post.votes += 1
+        post.post_message = request.POST["post_message"]
         selected_post.save()
+        post.save()
         return HttpResponseRedirect(reverse("polls:results", args=[post_id]))
