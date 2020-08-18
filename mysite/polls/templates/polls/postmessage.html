@@ -1,0 +1,12 @@
+<title>Post message details for: Post {{post.id}} </title>
+
+<h1>{{ post.post_text }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:edit_message' post.id %}" method="post">
+{% csrf_token %}
+    <input type="text" name="post_message" value="0" placeholder="write your post here">
+<input type="submit" value="Vote">
+</form>
+<a href="{% url 'polls:index' %}">Go back to latest posts</a>

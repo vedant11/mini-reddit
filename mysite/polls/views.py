@@ -37,6 +37,11 @@ class ResultsView(generic.DetailView):
     template_name = "polls/results.html"
 
 
+class PostMessageView(generic.DetailView):
+    model = Post
+    template_name = "polls/postmessage.html"
+
+
 def vote(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     try:
@@ -51,5 +56,21 @@ def vote(request, post_id):
         selected_post.votes += 1
         post.post_message = request.POST["post_message"]
         selected_post.save()
+        post.save()
+        return HttpResponseRedirect(reverse("polls:results", args=[post_id]))
+
+
+def edit_message(request, post_id):
+    print(request)
+    try:
+        post = get_object_or_404(Post, pk=post_id)
+    except (KeyError, Post.DoesNotExist):
+        return render(
+            request,
+            "polls/postmessage.html",
+            {"post": post, "error_message": "You didnt fill any text"},
+        )
+    else:
+        post.post_message = request.POST["post_message"]
         post.save()
         return HttpResponseRedirect(reverse("polls:results", args=[post_id]))

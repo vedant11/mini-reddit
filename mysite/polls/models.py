@@ -29,6 +29,7 @@ class Choice(models.Model):
 
 
 """
+To clear the DB
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 

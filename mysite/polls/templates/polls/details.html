@@ -1,4 +1,4 @@
-<title>Question details for: Question {{post.id}} </title>
+<title>Post details for: Post {{post.id}} </title>
 
 <h1>{{ post.post_text }}</h1>
 
@@ -10,7 +10,9 @@
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
 {% endfor %}
-    <input type="text" name="post_message" id="post_message{{forloop.counter}}" value="" placeholder="write your post here">
+    {% comment %} <input type="text" name="post_message" id="post_message{{forloop.counter}}" value="" placeholder="write your post here"> {% endcomment %}
 <input type="submit" value="Vote">
 </form>
 <a href="{% url 'polls:index' %}">Go back to latest posts</a>
+</br>
+<a href="{% url 'polls:view_message' post.id %}"> Edit post</a>
