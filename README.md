@@ -13,8 +13,21 @@ ____
 
 ### Viewing a post
 
-![README-asset2](https://user-images.githubusercontent.com/47473330/90379284-27774480-e098-11ea-9a02-8f7ad024ce6b.png)
+![viewing_a_post](https://user-images.githubusercontent.com/47473330/90491511-a4b8bd00-e15d-11ea-9669-def183e4605d.png)
+
 
 ### After commiting a vote to a post
 
 ![README-asset3](https://user-images.githubusercontent.com/47473330/90379346-3f4ec880-e098-11ea-8ae9-65241717fc69.png)
+
+### Editing the post message body
+
+![adding_a_new_body](https://user-images.githubusercontent.com/47473330/90491797-0aa54480-e15e-11ea-9ec4-238d0745d315.png)
+
+- Updated body after editing
+
+- ![updated_post_body_in_db](https://user-images.githubusercontent.com/47473330/90491978-4809d200-e15e-11ea-844a-a83789149019.png)
+
+
+
+
