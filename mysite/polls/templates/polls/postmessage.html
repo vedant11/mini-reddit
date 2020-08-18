@@ -6,7 +6,7 @@
 
 <form action="{% url 'polls:edit_message' post.id %}" method="post">
 {% csrf_token %}
-    <input type="text" name="post_message" value="0" placeholder="write your post here">
+    <input type="text" name="post_message" value="" placeholder="write your post here">
 <input type="submit" value="Vote">
 </form>
 <a href="{% url 'polls:index' %}">Go back to latest posts</a>
